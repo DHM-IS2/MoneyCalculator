@@ -1,4 +1,4 @@
-package ui;
+    package ui;
 
 import java.io.BufferedReader;
 import java.io.IOException;
@@ -12,8 +12,6 @@ public class MoneyDialog {
     private Money money;
     
     public Money execute() throws IOException{
-        
-        Money money;
         Currency currency;
         Number amount;
         BufferedReader reader = new BufferedReader(new InputStreamReader(System.in));

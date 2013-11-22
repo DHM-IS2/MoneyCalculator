@@ -8,13 +8,17 @@ import model.Currency;
 import model.CurrencySet;
 
 public class CurrencyDialog{
-
+    
+    private Currency currency;
+    
     public Currency execute() throws IOException{
-        Currency currency;
         BufferedReader reader = new BufferedReader(new InputStreamReader(System.in));
         System.out.println("Introduzca el código de una divisa");
         currency = CurrencySet.getInstance().get(reader.readLine());
         return currency;
     }
     
+    public Currency getCurrency(){
+        return currency;
+    }
 }
