@@ -17,7 +17,8 @@ public class ExchangeMoneyControl{
     private CurrencyDialog currencyDialog;
     private MoneyViewer moneyViewer;
     private ExchangeRateLoader exchangeRateLoader;
-
+    
+    
     public ExchangeMoneyControl(MoneyDialog moneyDialog, CurrencyDialog currencyDialog, MoneyViewer moneyViewer, ExchangeRateLoader exchangeRateLoader) {
         this.moneyDialog = moneyDialog;
         this.currencyDialog = currencyDialog;
@@ -34,7 +35,8 @@ public class ExchangeMoneyControl{
     }
     
     private Money readMoney() throws IOException{
-        moneyDialog.execute();
+        Money money;
+        moneyDialog.show();
         return moneyDialog.getMoney();
     }
     

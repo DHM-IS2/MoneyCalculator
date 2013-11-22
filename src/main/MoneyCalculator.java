@@ -7,6 +7,7 @@ import persistence.CurrencySetLoader;
 import persistence.ExchangeRateLoader;
 import persistence.MockCurrencySetLoader;
 import persistence.MockExchangeRateLoader;
+import ui.ConsoleMoneyDialog;
 import ui.CurrencyDialog;
 import ui.MoneyDialog;
 import ui.MoneyViewer;
@@ -21,7 +22,7 @@ public class MoneyCalculator {
     public void execute() throws IOException{
         MockCurrencySetLoader mockCurrencySetLoader = MockCurrencySetLoader.getInstance();
         mockCurrencySetLoader.load();
-        MoneyDialog moneyDialog = new MoneyDialog();
+        MoneyDialog moneyDialog = new ConsoleMoneyDialog();
         CurrencyDialog currencyDialog = new CurrencyDialog();
         MoneyViewer moneyViewer = new MoneyViewer();
         MockExchangeRateLoader exchangeRateLoader = MockExchangeRateLoader.getInstance();        

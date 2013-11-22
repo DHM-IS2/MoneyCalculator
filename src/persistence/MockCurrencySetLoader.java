@@ -24,6 +24,7 @@ public class MockCurrencySetLoader implements CurrencySetLoader{
     
     public void load(){
         CurrencySet.getInstance().add(new Currency ("USD", "United States Dollar", "$"));
+        CurrencySet.getInstance().add(new Currency ("EUR", "United States Dollar", "$"));
     }
     
 }

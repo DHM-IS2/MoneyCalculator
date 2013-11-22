@@ -1,29 +1,12 @@
-    package ui;
+package ui;
 
-import java.io.BufferedReader;
-import java.io.IOException;
-import java.io.InputStreamReader;
-import model.Currency;
 import model.Money;
-import model.Number;
 
-public class MoneyDialog {
+public interface MoneyDialog {
     
-    private Money money;
-    
-    public Money execute() throws IOException{
-        Currency currency;
-        Number amount;
-        BufferedReader reader = new BufferedReader(new InputStreamReader(System.in));
-        System.out.println("Introduzca una cantidad de dinero");
-        amount = new Number(Double.parseDouble(reader.readLine()));
-        CurrencyDialog currencyDialog = new CurrencyDialog();
-        currency = currencyDialog.execute();
-        money = new Money(amount, currency);
-        return money;
-    }
+    public void setMoney(Money Money);
 
-    public Money getMoney(){
-        return money;
-    }
+    public Money getMoney();
+    
+    public void show();
 }
